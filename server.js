@@ -13,8 +13,7 @@ const PORT = process.env.PORT || 8080;
 app.use(parser.urlencoded({extended: false}));
 app.use(express.static('public'));
 app.use('/scripts', express.static('public/scripts'));
-app.use('/css', express.static('public/stylesheets'));
-app.use('/img', express.static('public/img'));
+
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
